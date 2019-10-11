@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				background: none;
+				border: none;
+				outline: none;
+				font-size: 5vw;
+			}
+			.active{
+				color: orange;
+				border-bottom: 1vw solid orange;
+			}
+			div{
+				background: skyblue;
+				height: 10vw;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" class="active">公告</button>
+		<button type="button">规则</button>
+		<button type="button">论坛</button>
+		<button type="button">安全</button>
+		<button type="button">公益</button>
+		<div style="display: block;">111111111111111111</div>
+		<div>222222222222222222</div>
+		<div>33333333333333333333</div>
+		<div>444444444444444444444</div>
+		<div>5555555555555555555555</div>
+		
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")
+			var aDiv=document.getElementsByTagName("button")
+			for (var i=0;i<aDiv.length;i++) {
+			aDiv[i].onmouseover=function(){
+				for (var i=0;i<aDiv.length;i++) {
+					aDiv[i].className=""
+					aDiv[i].index=i
+					oDiv[i].style.display="none"
+				}
+				this.className="active"
+				oDiv[this.index].style.display="block"
+			}
+				
+			}
+		</script>
+	</body>
+</html>
